@@ -20,25 +20,59 @@ class LoginScreen extends StatelessWidget {
               children: [
                 Text(
                   'IntelIA',
-                  style: Theme.of(context).textTheme.headline1,
+                  style: TextStyle(
+                    fontSize: 48.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
                 SizedBox(height: 40.0),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/home');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.green.shade800,
-                    backgroundColor: Colors.white,
-                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, '/home');
+                      },
+                      style: ElevatedButton.styleFrom(
+                        foregroundColor: Colors.green.shade800,
+                        backgroundColor: Colors.white,
+                        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                      ),
+                      child: Text(
+                        'Iniciar',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.green.shade800,
+                        ),
+                      ),
                     ),
-                  ),
-                  child: Text(
-                    'Login',
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/user');
+                      },
+                      style: ElevatedButton.styleFrom(
+                        foregroundColor: Colors.green.shade800,
+                        backgroundColor: Colors.white,
+                        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                      ),
+                      child: Text(
+                        'Usuário',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.green.shade800,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

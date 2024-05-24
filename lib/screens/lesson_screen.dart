@@ -9,6 +9,7 @@ class LessonScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(lesson.title),
+        centerTitle: true,
         backgroundColor: Colors.green.shade800,
       ),
       body: ListView.builder(
@@ -23,9 +24,17 @@ class LessonScreen extends StatelessWidget {
             elevation: 5.0,
             child: ListTile(
               title: Text(
-                question,
-                style: TextStyle(fontSize: 16.0),
+                'Tópico ${index + 1}',
+                style: Theme.of(context).textTheme.bodyText2,
+
               ),
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  '/topic',
+                  arguments: 'Tópico ${index + 1}',
+                );
+              },
             ),
           );
         },

@@ -11,6 +11,20 @@ class HomeScreen extends StatelessWidget {
         title: Text('Lições'),
         centerTitle: true,
         backgroundColor: Colors.green.shade800,
+        leading: IconButton(
+          icon: Icon(Icons.home),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/');
+          },
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.person),
+            onPressed: () {
+              Navigator.pushNamed(context, '/user');
+            },
+          ),
+        ],
       ),
       body: Consumer<LessonProvider>(
         builder: (context, lessonProvider, child) {

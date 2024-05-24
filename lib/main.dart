@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/lesson_screen.dart';
+import 'screens/topic_screen.dart';
+import 'screens/user_screen.dart';
 import 'provider/lesson_provider.dart';
 
 void main() {
@@ -15,6 +17,7 @@ class IntelIAApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => LessonProvider(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'IntelIA',
         theme: ThemeData(
           primarySwatch: Colors.green,
@@ -30,6 +33,8 @@ class IntelIAApp extends StatelessWidget {
           '/': (context) => LoginScreen(),
           '/home': (context) => HomeScreen(),
           '/lesson': (context) => LessonScreen(),
+          '/topic': (context) => TopicScreen(),
+          '/user': (context) => UserScreen(), //
         },
       ),
     );
