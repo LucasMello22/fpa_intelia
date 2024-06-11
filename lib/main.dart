@@ -6,6 +6,7 @@ import 'screens/lesson_screen.dart';
 import 'screens/topic_screen.dart';
 import 'screens/user_screen.dart';
 import 'provider/lesson_provider.dart';
+import 'provider/topic_provider.dart';
 
 void main() {
   runApp(IntelIAApp());
@@ -14,8 +15,11 @@ void main() {
 class IntelIAApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => LessonProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => LessonProvider()),
+        ChangeNotifierProvider(create: (context) => TopicProvider()),
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'IntelIA',
@@ -34,7 +38,7 @@ class IntelIAApp extends StatelessWidget {
           '/home': (context) => HomeScreen(),
           '/lesson': (context) => LessonScreen(),
           '/topic': (context) => TopicScreen(),
-          '/user': (context) => UserScreen(), //
+          '/user': (context) => UserScreen(),
         },
       ),
     );

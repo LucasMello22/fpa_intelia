@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../provider/lesson_provider.dart';
+import '../provider/lesson_provider.dart'; // Ajuste o caminho conforme necessário
+import '../models/lesson.dart'; // Ajuste o caminho conforme necessário
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -31,6 +32,7 @@ class HomeScreen extends StatelessWidget {
           return ListView.builder(
             itemCount: lessonProvider.lessons.length,
             itemBuilder: (context, index) {
+              final lesson = lessonProvider.lessons[index];
               return Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 shape: RoundedRectangleBorder(
@@ -43,14 +45,14 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.green.shade800,
                   ),
                   title: Text(
-                    lessonProvider.lessons[index].title,
+                    lesson.title,
                     style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
                   ),
                   onTap: () {
                     Navigator.pushNamed(
                       context,
                       '/lesson',
-                      arguments: lessonProvider.lessons[index],
+                      arguments: lesson.title, // Passa o título da lição ao invés do objeto Lesson
                     );
                   },
                 ),
