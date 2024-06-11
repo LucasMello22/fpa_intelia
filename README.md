@@ -1,16 +1,12 @@
 # fpa_intelia
 
-A new Flutter project.
+A Flutter project for studies.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+The idea is to bring together and serve as a bridge to knowledge about AI and machine learning.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## For gallery
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Images and other files - https://drive.google.com/drive/folders/1lKpzRIqIdO3DHQCKScEeLI4fYKLf3VEU?usp=drive_link
