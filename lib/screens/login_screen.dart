@@ -18,13 +18,9 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'IntelIA',
-                  style: TextStyle(
-                    fontSize: 48.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
+                Image.asset(
+                  'assets/logo1.png',
+                  height: 150.0, // Ajuste o tamanho da imagem conforme necessário
                 ),
                 SizedBox(height: 40.0),
                 Row(
