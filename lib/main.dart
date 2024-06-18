@@ -7,7 +7,7 @@ import 'screens/topic_screen.dart';
 import 'screens/user_screen.dart';
 import 'provider/lesson_provider.dart';
 import 'provider/topic_provider.dart';
-
+import 'screens/lesson_detail_screen.dart';
 void main() {
   runApp(IntelIAApp());
 }

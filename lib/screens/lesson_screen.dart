@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/topic.dart'; // Ajuste o caminho conforme necessário
 import '../provider/topic_provider.dart'; // Ajuste o caminho conforme necessário
+import 'lesson_detail_screen.dart'; // Ajuste o caminho conforme necessário
 
 class LessonScreen extends StatelessWidget {
   @override
@@ -13,7 +14,6 @@ class LessonScreen extends StatelessWidget {
         title: Text('Topics'),
         centerTitle: true,
         backgroundColor: Colors.green.shade800,
-
       ),
       body: ListView.builder(
         itemCount: topics.length,
@@ -25,57 +25,30 @@ class LessonScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(15.0),
             ),
             elevation: 5.0,
-            child: ListTile(
+            child: ExpansionTile(
               title: Text(
                 topic.title,
                 style: Theme.of(context).textTheme.bodyText2,
               ),
-              onTap: () {
-                // Aqui você pode navegar para a tela de conteúdo do tópico
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => TopicContentScreen(topic: topic),
+              children: topic.lessons.map((lesson) {
+                return ListTile(
+                  title: Text(
+                    lesson.title,
+                    style: Theme.of(context).textTheme.bodyText2,
                   ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LessonDetailScreen(lesson: lesson),
+                      ),
+                    );
+                  },
                 );
-              },
+              }).toList(),
             ),
           );
         },
-      ),
-    );
-  }
-}
-
-class TopicContentScreen extends StatelessWidget {
-  final Topic topic;
-
-  const TopicContentScreen({required this.topic});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(topic.title),
-        centerTitle: true,
-      ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              topic.title,
-              style: Theme.of(context).textTheme.headline6,
-            ),
-            SizedBox(height: 10.0),
-            Text(
-              topic.description,
-              style: Theme.of(context).textTheme.bodyText2,
-            ),
-            // Aqui você pode adicionar mais widgets para exibir o conteúdo do tópico
-          ],
-        ),
       ),
     );
   }
