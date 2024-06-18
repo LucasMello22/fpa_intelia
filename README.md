@@ -2,7 +2,7 @@
 
 A Flutter project for studies.
 
-## Getting Started
+## Idea
 
 The idea is to bring together and serve as a bridge to knowledge about AI and machine learning.
 
