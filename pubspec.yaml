@@ -34,6 +34,9 @@ dependencies:
   font_awesome_flutter: ^10.2.1
   carousel_slider: ^4.0.0
   youtube_player_flutter: ^8.0.0
+  path_provider: ^2.0.1
+
+
 
 
 
@@ -71,6 +74,7 @@ flutter:
     - assets/image2.jpg
     - assets/image3.jpg
     - assets/image4.jpg
+    - assets/character_icon.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

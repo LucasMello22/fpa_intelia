@@ -41,7 +41,7 @@ class LessonScreen extends StatelessWidget {
         children: [
           CarouselSlider(
             options: CarouselOptions(
-              height: 150.0,
+              height: 180.0,
               autoPlay: true,
               enlargeCenterPage: true,
               aspectRatio: 16 / 9,
