@@ -30,16 +30,25 @@ class TopicProvider with ChangeNotifier {
       ],
     ),
     Topic(
-      title: 'Terceira Lição',
+      title: 'A inteligência Artificial',
       description: 'Descrição da Terceira Lição',
       lessons: [
         Lesson(
-          title: 'Lição 1',
+          title: 'Inteligência?',
           content: 'Conteúdo da Lição 1 da Terceira Lição',
         ),
       ],
     ),
-
+    Topic(
+      title: 'O aprendizado das maquinas',
+      description: 'Descrição da Terceira Lição',
+      lessons: [
+        Lesson(
+          title: 'Machine Learning',
+          content: 'Conteúdo da Lição 1 da Quarta Lição',
+        ),
+      ],
+    ),
     // Adicione mais tópicos conforme necessário
   ];
 
