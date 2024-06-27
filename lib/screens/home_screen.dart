@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../provider/lesson_provider.dart'; // Ajuste o caminho conforme necessário
-import '../models/lesson.dart'; // Ajuste o caminho conforme necessário
+import '../provider/lesson_provider.dart';
+import '../models/lesson.dart';
+
+//Essa aqui foi de arasta
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -52,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.pushNamed(
                       context,
                       '/lesson',
-                      arguments: lesson.title, // Passa o título da lição ao invés do objeto Lesson
+                      arguments: lesson.title,
                     );
                   },
                 ),

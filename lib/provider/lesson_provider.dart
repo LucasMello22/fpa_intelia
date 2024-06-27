@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../models/lesson.dart';
 
+//Não sei mais pra que eu estou usando esse arquivo
+
 class LessonProvider extends ChangeNotifier {
   List<Lesson> _lessons = [
     Lesson(

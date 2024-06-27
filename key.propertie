@@ -1,0 +1,4 @@
+storePassword=192835
+keyPassword=192835
+keyAlias=upload
+storeFile=D:/Users/Lucas/Documents/Faculdades/Mestrado/Fundamentos de Programação Aplicad/upload-keystore.jks

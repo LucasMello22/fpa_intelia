@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'screens/login_screen.dart';
+import 'screens/initial_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/lesson_screen.dart';
 import 'screens/topic_screen.dart';
@@ -34,8 +34,8 @@ class IntelIAApp extends StatelessWidget {
         ),
         initialRoute: '/',
         routes: {
-          '/': (context) => LoginScreen(),
-          '/home': (context) => HomeScreen(),
+          '/': (context) => Initial(),
+          '/home': (context) => LessonScreen(),
           '/lesson': (context) => LessonScreen(),
           '/topic': (context) => TopicScreen(),
           '/user': (context) => UserScreen(),
