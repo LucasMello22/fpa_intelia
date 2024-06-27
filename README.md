@@ -1,5 +1,6 @@
 # fpa_intelia
 
+This project aims to gather, in a simple and gradual manner, study materials on Artificial Intelligence. It will include interesting videos and associated content that will enrich understanding of this technology, which is already part of our daily lives
 A Flutter project for studies.
 All existing documents are in the link - https://drive.google.com/drive/folders/1lKpzRIqIdO3DHQCKScEeLI4fYKLf3VEU?usp=drive_link
 
