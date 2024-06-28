@@ -20,3 +20,7 @@ Images - https://drive.google.com/drive/folders/146vHA6zXEGnBsCqiwvMy_F7bjqTPHSX
 ## For pitch
 
 Video Pitch - https://drive.google.com/file/d/1PCGPFussHY1NItSyEva3K9xT_3C6-ejQ/view?usp=drive_link
+
+## For demonstration
+
+Demonstration Video - https://drive.google.com/file/d/1yat3I4_EM0l-oAfRAoas1xfxEDD8LBgx/view?usp=drive_link
